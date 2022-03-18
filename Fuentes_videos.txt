@@ -1,0 +1,9 @@
+video_uri = "gs://storage_video01/videos/JavierPradoGente.mp4"
+results = detect_shot_changes(video_uri)
+
+
+
+video_uri = "gs://storage_video01/videos/Trafico.mp4"
+results = detect_shot_changes(video_uri)
+
+
