@@ -1,0 +1,21 @@
+spideroriol@cloudshell:~/video-intelligence (my-project-91798-video-ai)$ ERVICE_ACCOUNT_NAME="video-intelligence-codelab"
+spideroriol@cloudshell:~/video-intelligence (my-project-91798-video-ai)$ SERVICE_ACCOUNT_NAME="video-intelligence-codelab"
+spideroriol@cloudshell:~/video-intelligence (my-project-91798-video-ai)$ PROJECT_ID=$(gcloud config get-value core/project)
+Your active configuration is: [cloudshell-28425]
+spideroriol@cloudshell:~/video-intelligence (my-project-91798-video-ai)$ SERVICE_ACCOUNT="$SERVICE_ACCOUNT_NAME@$PROJECT_ID.iam.gserviceaccount.com"
+spideroriol@cloudshell:~/video-intelligence (my-project-91798-video-ai)$ gcloud iam service-accounts create $SERVICE_ACCOUNT_NAME
+Created service account [video-intelligence-codelab].
+spideroriol@cloudshell:~/video-intelligence (my-project-91798-video-ai)$ gcloud iam service-accounts keys create $GOOGLE_APPLICATION_CREDENTIALS \
+  --iam-account $SERVICE_ACCOUNT
+created key [a27007c886b3881e9149e9edf23be3c02fbdcc3e] of type [json] as [/home/spideroriol/video-intelligence/key.json] for [video-intelligence-codelab@my-project-91798-video-ai.iam.gserviceaccount.com]
+spideroriol@cloudshell:~/video-intelligence (my-project-91798-video-ai)$ cat $GOOGLE_APPLICATION_CREDENTIALS
+{
+  "type": "service_account",
+  "project_id": "my-project-91798-video-ai",
+  "private_key_id": "a27007c886b3881e9149e9edf23be3c02fbdcc3e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDE11IBZuo+vinw\nq6diyQvDRkmwQCyy17jV1HK70wxtQ3vLs/mCXLAOsOy3t8EnWZP+riG6d6rfEo1Z\nmlWm7FB9ZZnkpW787/Ej0zhNME64P5RKV8txLlho5P0zkGTamAr+Y2YrBVEy+iMn\nRWkR3M6FqyblWPXfdO4B5678/jINe0zGwXfBcuKGFSD4PLQLktfuB7c4A+tj2jAF\nucTgmM8WhsZ8gDvSC+HV2AZD3bl8sLzE2EbHFztBmnVEcks4JNpGVDhJ4+94zABs\n8YlnJfRHJKBPoBsttrWZxSyYHWFANbYvwLSkr+R5MLe2Dbs8wCvy3PjxjgbYZttE\nTiHryd8fAgMBAAECggEAScycv0/RhSKQ4N3KjPvpgBYLLJxy5b6BWxIizg6rew+x\nC0d3xYtwqqFkruCi91jbZsHsfVe+ZZI0EqMNd97jso/0Kchom0Zud0sKsc3pxaR4\nuYK/ELkahoFL+Rgq59XXUVb9CCYfMmib425fnUXW3EC1/Yjj7hqN3YL6lXnMVEb8\nwSHl4o1VL5GH+dQ7L9NRJH2SFEUSoqF6msGnVZdALmMi0arGqh4IKuWFk+kIIwmK\ndOHKWhvidk3qIfCqLvKbL8q/BORgAEWRMS1D6K36AGp6E/W/9fbJoQvdJgqDv8qj\nv8pgtck68kjMyRmk4tvYXZued/Nrd7FstvfDar8KaQKBgQDkaeE+BZfu+E7hHqug\nnkwvQJUIXiFGL4NVmmVu2uYyQ6PpCTWuWOXj43OzIVqt19MSbDBliieGaHqMegR1\n9XRO1ceJU7gzL+7uv5rh0MGsWwLXunhPuVCoNnS+dlH2Q4I8l5jtQxtc5iS5FzRn\nFQuWeHWHq4exZG+cSGVUXBZ6zQKBgQDcnUcsYfWwT95yUzwxoV1cnKqS6NsFD3Sg\nrQcRwX1//68E3d6ES58Y0/uRv0mV2+Fj49vN/DO0M0Durco3E3v7AqHN5hSDXCyP\nPzpd4rM6N7RxkiAYmS344rBqnIgKtDP+2J12152AwVG/Zn0/ZUiB6tgBmVr4vtYZ\ngOkfN+2ZmwKBgQCVx3RjNknF81/OMU17+rGcfq37mbYaDwgBN0hyY+p1ZXNzWY2w\n8Sx2vmzdNu7+djs7pmQqAWkfsx1BRrXsH/OPypGY1KRCNJlqR4yprTmC6v83NVi1\ndqCUXXk6d94RLX2WfBZU5x9nUKceFEBRpDRADGeNeoZ1ZZXmlnaT1fsLtQKBgQDW\n4NYHE67zOQfogMv7ZzmBUBMQHn/dkO0+5ukg0T6E4qw86EGox+NBko/QqOlqbo08\n9x4Lpt9RYC6Zi2qPdInoteqVmslWHPxF1gbqlTmOtd0qVXKvottVNK8yWB5llpmi\nWqgcrex6EVGnRJMvoV4bNHuKKy2hZHcyxg3KW3YwiwKBgEHeayTMsNNwiTFoXwZ5\nkDtTTGLE3fx+SuDFuiF1cSJ1nCZWJZ7+3enOPbcECV5qODS2WhsewHY6lWrWczPQ\nn4J3WPNsJr8Rt7NC0vcTnxbQ949i20MOLqOPChhTarBag9Rfumt5GTQRmx2+NTI2\nVY6KQVWrehdbinWd14LF8GfE\n-----END PRIVATE KEY-----\n",
+  "client_email": "video-intelligence-codelab@my-project-91798-video-ai.iam.gserviceaccount.com",
+  "client_id": "104102860139313231127",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
